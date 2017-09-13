@@ -38,3 +38,18 @@ require 'Autoloader.php';
 //$orderStatus = \Classes\CurlFabric::init('orderStatus', array('ordersId' => array(110056,11938397,11938403)));
 //var_dump($orderStatus->result);
 //var_dump($orderStatus->info);
+
+//Получение списка заказов
+// Так как получение статусов по заказам требует авторизации, вам необходимо указать токен
+// Получить токен можно в личном кабинете на сайте
+//\Classes\Methods\AbstractMethod::setToken('fH19b_IH2R821O2sowAT0akHcdk4fZaN');
+//$orderList = \Classes\CurlFabric::init(
+//    'orderList', array(
+//        'dateTo' => date('Y-m-d', strtotime('now')), // Дата до которой нужно получить заказы
+//        'dateFrom' => date('Y-m-d', strtotime('last Monday')), // Дата с которой нужно получить заказы
+//        'page' => 0, // Страница для вывода начиная с 0
+//        'limit' => 20 // Максимальное количество заказов для получения 100
+//    )
+//);
+//var_dump($orderList->result);
+//var_dump($orderList->info);
