@@ -7,7 +7,7 @@ use Classes\Methods\AbstractMethod;
 class Curl {
 
     public static $defaultCurlTimeout = 30;
-    public static $apiUrl = 'http://api.test';
+    public static $apiUrl = 'http://api.m4leads.com';
 
     public $options = array(
         CURLOPT_RETURNTRANSFER => true,
