@@ -42,3 +42,21 @@ $orderStatus = \Classes\CurlFabric::init('orderStatus', array('ordersId' => arra
 var_dump($orderStatus->result);
 var_dump($orderStatus->info);
 ```
+Получение списка заказов
+
+ Так как получение статусов по заказам требует авторизации, вам необходимо указать токен
+
+ Получить токен можно в личном кабинете на сайте
+```
+\Classes\Methods\AbstractMethod::setToken('eNkXyYlZK0rKZy6T6_NueB3_SLRz3Ufz');
+$orderList = \Classes\CurlFabric::init(
+    'orderList', array(
+        'dateTo' => date('Y-m-d', strtotime('now')), // Дата до которой нужно получить заказы
+        'dateFrom' => date('Y-m-d', strtotime('last Monday')), // Дата с которой нужно получить заказы
+        'page' => 0, // Страница для вывода начиная с 0
+        'limit' => 20 // Максимальное количество заказов для получения 100
+    )
+);
+var_dump($orderList->result);
+var_dump($orderList->info);
+```
