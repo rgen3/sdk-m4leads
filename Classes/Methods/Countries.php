@@ -22,7 +22,6 @@ class Countries extends AbstractMethod
     public function processResult($data)
     {
         $result = json_decode($data, true);
-        var_dump($result);die();
         $this->setResult($result);
         return $this;
     }
